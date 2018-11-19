@@ -7,7 +7,8 @@ const parser = require('./parser')
 // Create a server with a host and port
 const server=Hapi.server({
     host:'0.0.0.0',
-    port: 8000
+	port: 8000,
+	cors: true
 });
 
 // Add the route
