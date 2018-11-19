@@ -7,8 +7,7 @@ const parser = require('./parser')
 // Create a server with a host and port
 const server=Hapi.server({
     host:'0.0.0.0',
-	port: 8000,
-	cors: true
+	port: 8000
 });
 
 // Add the route
@@ -16,6 +15,7 @@ server.route({
     method:'POST',
 	path:'/parse',
 	options: {
+		cors: true,
 		payload: {
 			maxBytes: 2097152,
 			allow: 'text/csv'
